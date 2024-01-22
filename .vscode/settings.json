@@ -1,0 +1,11 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "db_Alura",
+            "database": "${workspaceFolder:Atividades-Cursos-Alura}/ORM com Sequelize e Comunicação com Websockets/database.sqlite"
+        },
+    ]
+}
