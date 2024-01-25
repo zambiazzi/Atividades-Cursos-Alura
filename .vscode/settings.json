@@ -7,5 +7,10 @@
             "name": "db_Alura",
             "database": "${workspaceFolder:Atividades-Cursos-Alura}/ORM com Sequelize e Comunicação com Websockets/database.sqlite"
         },
-    ]
+    ],
+    "workbench.colorTheme": "Dark++",
+    "workbench.preferredDarkColorTheme": "Dark++",
+    "workbench.preferredHighContrastColorTheme": "Dark++",
+    "workbench.preferredHighContrastLightColorTheme": "Dark++",
+    "workbench.preferredLightColorTheme": "Dark++"
 }
