@@ -19,6 +19,4 @@ servidorHttp.listen(PORT, () => {
 
 const io = new Server(servidorHttp);
 
-io.on("connection", () => { // o on funciona como o listen
-  console.log("Um cliente se conectou!");
-})
+export default io;
