@@ -1,9 +1,28 @@
 import io from "./servidor.js";
 
+const documentos = [
+  {
+    nome: "JavaScript",
+    texto: "texto de javascript..."
+  },
+  {
+    nome: "Node",
+    texto: "texto de node..."
+  },
+  {
+    nome: "Socket.IO",
+    texto: "texto de socket.io..."
+  }
+];
+
 io.on("connection", (socket) => { // o on funciona como o listen
   console.log("Um cliente se conectou! ID:", socket.id);
   
   socket.on("selecionar_documento", (nomeDocumento) => {
+    const documento = encontrarDocumento(nomeDocumento);
+
+    console.log(documento);
+
     socket.join(nomeDocumento);
   });
 
@@ -11,3 +30,11 @@ io.on("connection", (socket) => { // o on funciona como o listen
     socket.to(nomeDocumento).emit("texto_editor_clientes", texto);
   });
 });
+
+function encontrarDocumento(nome) {
+  const documento = documentos.find(() => {
+    return documentos.nome === nome;
+  });
+
+  return documento;
+}
