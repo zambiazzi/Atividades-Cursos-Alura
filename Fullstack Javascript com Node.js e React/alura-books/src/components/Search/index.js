@@ -25,10 +25,25 @@ const Subtitulo = styled.h3`
   margin-bottom: 40px;
 `
 
+const Resultado = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  p {
+      width: 200px;
+  }
+  img {
+      width: 100px;
+  }
+  &:hover {
+      border: 1px solid white;
+  }
+`
+
 function Search() {
   const [livrosPesquisados, setLivrosPesquisados] = useState([]);
-
-  console.log(livrosPesquisados);
 
   return (
     <PesquisaContainer>
@@ -42,6 +57,12 @@ function Search() {
           setLivrosPesquisados(resultadoPesquisa)
         }}
       />
+      { livrosPesquisados.map( livro => (
+        <Resultado>
+          <p>{livro.nome}</p>
+          <img src={livro.src} alt='imagem'/>
+        </Resultado>
+      ) ) }
     </PesquisaContainer>
   )
 }
