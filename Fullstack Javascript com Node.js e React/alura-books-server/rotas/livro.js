@@ -1,6 +1,5 @@
-import { getLivros } from '../controladores/livro.js';
-
 const { Router } = require('express');
+const { getLivros } = require('../controladores/livro.js');
 
 const router = Router();
 
