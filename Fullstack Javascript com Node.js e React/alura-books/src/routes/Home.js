@@ -1,6 +1,5 @@
-import Header from './components/Header';
-import Search from './components/Search';
-import UltimosLancamentos from './components/UltimosLancamentos';
+import Search from '../components/Search';
+import UltimosLancamentos from '../components/UltimosLancamentos';
 import styled from 'styled-components';
 
 const AppContainer = styled.div`
@@ -10,14 +9,13 @@ const AppContainer = styled.div`
   }
 `
 
-function App() {
+function Home() {
   return (
     <AppContainer>
-      <Header />
       <Search />
       <UltimosLancamentos />
     </AppContainer>
   );
 }
 
-export default App;
+export default Home;
